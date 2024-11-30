@@ -1,0 +1,15 @@
+[server]
+headless = true
+port = 8501
+enableCORS = false
+enableXsrfProtection = false
+
+[theme]
+base="dark"
+primaryColor="#82ce30"
+backgroundColor="#212631"
+secondaryBackgroundColor="#464650"
+hideMenuBar = true
+
+[logger]
+level = "info"
