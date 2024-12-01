@@ -201,7 +201,7 @@ abas = ["Vendas 💰", "Produtos 🛍️", "Saídas 💸", "Relatórios 📊", "
 aba_selecionada = st.sidebar.radio("Selecionar aba", abas)
 
 if aba_selecionada == "Produtos 🛍️":
-    st.sidebar.image(logo, use_column_width=True)
+    st.sidebar.image(logo, use_container_width=True)
     st.header("Cadastro de Produtos")
 
     # Adicionar um novo produto
@@ -254,7 +254,7 @@ if aba_selecionada == "Produtos 🛍️":
 
 # Aba de Vendas
 elif aba_selecionada == "Vendas 💰":
-    st.sidebar.image(logo, use_column_width=True)
+    st.sidebar.image(logo, use_container_width=True)
     st.header("Lançar Vendas 💰")
     
     # Carregar os produtos como uma lista de IDs e nomes para exibição
@@ -282,7 +282,7 @@ elif aba_selecionada == "Vendas 💰":
 
 # Aba de Relatórios
 elif aba_selecionada == "Relatórios 📊":
-    st.sidebar.image(logo, use_column_width=True)
+    st.sidebar.image(logo, use_container_width=True)
     st.header("Relatório de Vendas por Tipo de Pagamento")
     data_relatorio = st.date_input("Selecione a data do relatório", value=datetime.today().date())
     # Consulta as vendas e agrupa por forma de pagamento
@@ -411,7 +411,7 @@ elif aba_selecionada == "Relatórios 📊":
 
 # Aba de Saídas
 elif aba_selecionada == "Saídas 💸":
-    st.sidebar.image(logo, use_column_width=True)
+    st.sidebar.image(logo, use_container_width=True)
     st.header("Registrar Saídas")
     descricao = st.text_input("Descrição")
     valor = st.number_input("Valor (R$)", min_value=0.0, format="%.2f")
@@ -420,7 +420,7 @@ elif aba_selecionada == "Saídas 💸":
         st.success("Saída registrada com sucesso!")
 
 elif aba_selecionada == "Backup 💾":
-    st.sidebar.image(logo, use_column_width=True)
+    st.sidebar.image(logo, use_container_width=True)
     st.header("Backup e Restauração")
     
     col1, col2 = st.columns(2)
